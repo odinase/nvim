@@ -6,12 +6,11 @@ call plug#begin()
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe',
 Plug 'rust-lang/rust.vim'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'Rip-Rip/clang_complete'
 Plug 'rhysd/vim-clang-format'
 Plug 'tomasr/molokai'                       " Colorscheme
 Plug 'morhetz/gruvbox'                      " Colorscheme
@@ -51,6 +50,8 @@ let g:polyglot_disabled = ['elm']
 let g:airline#extension#ale#enabled = 1
 let g:clang_library_path='~/.config/nvim/plugged/YouCompleteMe/third_party/ycmd/third_party/clang/lib/libclang.so.7'
 let g:clang_format#auto_format = 1
+let g:clang_format#command = 'clang-format-7'
+let g:ycm_use_clangd = "Never"
 
 """"""""""""""""""""
 "" Basic setup
@@ -93,6 +94,7 @@ command VV split
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 autocmd Filetype python setlocal ts=2 sw=2 expandtab
 autocmd Filetype rust setlocal ts=4 sw=4 expandtab
+autocmd FileType c ClangFormatAutoEnable
 
 " Editing
 set noswapfile
