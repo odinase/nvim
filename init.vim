@@ -4,6 +4,7 @@
 
 call plug#begin()
 
+Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -61,6 +62,17 @@ let g:ycm_use_clangd = "Never"
 filetype plugin indent on
 syntax on
 
+" " Copy to clipboard
+vnoremap  <leader>y  "+y
+nnoremap  <leader>Y  "+yg_
+nnoremap  <leader>y  "+y
+
+" " Paste from clipboard
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P
+
 " Indent and place between braces
 inoremap {<CR> {<CR>}<Esc>O<BS><Tab>
 inoremap [<CR> [<CR>]<Esc>O<BS><Tab>
@@ -78,6 +90,12 @@ noremap <Leader>b :Buffers<CR>
  imap <down> <nop>
  imap <left> <nop>
  imap <right> <nop>
+
+map <C-J> <C-W>j<C-W>_
+map <C-K> <C-W>k<C-W>_
+map <C-H> <C-W>h<C-W>_
+map <C-L> <C-W>l<C-W>_
+
 " Encoding
 set encoding=utf-8                          " Inside editor
 set fileencoding=utf-8                      " In buffer
