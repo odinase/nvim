@@ -8,12 +8,12 @@ Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'Valloric/YouCompleteMe',
+"Plug 'Valloric/YouCompleteMe',
 Plug 'rust-lang/rust.vim'
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+" Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'rhysd/vim-clang-format'
+" Plug 'rhysd/vim-clang-format'
 Plug 'tomasr/molokai'                       " Colorscheme
 Plug 'morhetz/gruvbox'                      " Colorscheme
 Plug 'tpope/vim-commentary'                 " gc(c) to comment out/in
@@ -22,7 +22,7 @@ Plug 'vim-airline/vim-airline'              " Pretty statusline
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'               " Git lines added/removed
 Plug 'vim-scripts/CSApprox'                 " Fix terminal colorschemes
-Plug 'bronson/vim-trailing-whitespace'      " Highlight trailing whitespace
+"Plug 'bronson/vim-trailing-whitespace'      " Highlight trailing whitespace
 Plug 'Raimondi/delimitMate'                 " Match ([{ etc
 Plug 'Yggdroot/indentLine'                  " Mark indent levels
 Plug 'vim-scripts/DoxygenToolkit.vim'       " Add :Dox command
@@ -105,6 +105,8 @@ set fileencodings=ut-8                      " Opening files
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set ttimeout
+set ttimeoutlen=0
 
 " Commands
 command HH vsplit
@@ -154,6 +156,7 @@ set scrolloff=3                             " Show 3 lines above/below
 set laststatus=2
 set statusline=%m%r%F%=%Y\ (line\ %l\/%L\ col\ %c)
 
+let g:python_highlight_space_errors = '0'
 " Vim-airline
 let g:airline_theme = 'angr'
 if !exists('g:airline_symbols')
