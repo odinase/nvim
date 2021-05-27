@@ -28,7 +28,7 @@ Plug 'Yggdroot/indentLine'                  " Mark indent levels
 Plug 'vim-scripts/DoxygenToolkit.vim'       " Add :Dox command
 Plug 'w0rp/ale'                             " Asynchronous Lint Engine
 Plug 'elmcast/elm-vim'                      " Elm support
-Plug 'sheerun/vim-polyglot'                 " Language support
+" Plug 'sheerun/vim-polyglot'                 " Language support
 " Plug 'slashmili/alchemist.vim'              " Elixir autocomplete
 " Plug 'pangloss/vim-javascript'              " Javascript bundle
 " Plug 'sukima/xmledit'                       " Markup tag matching
@@ -48,7 +48,7 @@ call plug#end()
 let g:ale_lint_on_text_changed = 'never'      " Lint on save and open only
 let g:elm_setup_keybindings = 0
 let g:elm_format_autosave = 1
-let g:polyglot_disabled = ['elm']
+" let g:polyglot_disabled = ['elm']
 let g:airline#extension#ale#enabled = 1
 let g:clang_library_path='~/.config/nvim/plugged/YouCompleteMe/third_party/ycmd/third_party/clang/lib/libclang.so.7'
 let g:clang_format#auto_format = 1
